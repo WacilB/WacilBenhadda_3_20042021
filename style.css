@@ -1,0 +1,281 @@
+/* Reset CSS */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+    font-family: 'Roboto', sans-serif;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+
+
+
+/* ----------------- Header---------------- */
+
+.header{
+    padding: 1rem;
+    box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
+    z-index: 1000;
+    position: relative;
+}
+.header__logo{
+    text-align: center;
+    font-family: 'Shrikhand', cursive;
+    font-size: 2em;
+}
+
+/* ----------------- Localisation---------------- */
+.localisation{
+    display: flex;
+    justify-content: center;
+    padding: 1.25rem 1rem;
+    font-size: 1.2rem;
+    background-color: #f3f3f3;
+    z-index: 1;
+}
+.localisation__icon{
+    margin-right: 1rem;
+}
+.localisation__text{
+    font-weight: 700;
+}
+/* ----------------- Banniere---------------- */
+
+.banniere{
+    text-align: center;
+    padding: 2rem;
+}
+.banniere__titre{
+    font-size: 1.5em;
+}
+.banniere__text{
+    font-weight: 300;
+    margin: 1.5rem 0;
+}
+
+.banniere__btn{
+    border: 0;
+    padding: .75rem 1.5rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border-radius: 100px;
+    color: #fff;
+    background-color: #686868;
+    background-image: linear-gradient( 0deg ,rgba(147,86,220,.9),rgba(255,121,218,.9));
+    cursor: pointer;
+    transition-duration: .25s;
+    box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
+}
+
+/* ----------------- Fonctionnement---------------- */
+
+.fonctionnement{
+    max-width: 1280px;
+    margin: auto;
+    padding: 2rem 1rem;
+}
+
+.fonctionnement__titre{
+    margin: 0  0 0.8em  0;
+    font-size: 1.5em;
+}
+
+.fonctionnement__etape{
+    padding: 1.5rem;
+    margin: 1rem 0 1rem .75rem;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
+    border-radius: 1.25rem;
+    background-color: #f6f6f6;
+    display: flex;
+    position: relative;
+}
+
+.fonctionnement__etape:first-child::before{
+    margin-top: 0;
+    content: "1";
+    background: #9356dc;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: absolute;
+    left: -.75rem;
+}
+
+.fonctionnement__etape:nth-child(2)::before{
+    content:  "2";
+    background: #9356dc;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: absolute;
+    left: -.75rem;
+}
+.fonctionnement__etape:last-child::before{
+    content: "3";
+    background: #9356dc;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: absolute;
+    left: -.75rem;
+}
+.fonctionnement__etape__icon{
+    margin-right: 1rem;
+    color: #7e7e7e;
+}
+/* ----------------- Restaurants---------------- */
+.restaurants{
+    background-color: #f6f6f6;
+    padding: 2rem 1rem;
+}
+.restaurants__container{
+    max-width: 1280px;
+    margin: auto;
+    position: relative;
+}
+.restaurants__title{
+    font-size: 1.5em;
+    margin-bottom: 0.8em;
+    font-weight: bold;
+}
+.restaurants__grid{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+.restaurants__cards{
+    background-color: #fff;
+    border-radius: 1rem;
+    position: relative;
+    text-decoration: none;
+    display: block;
+    color: black;
+}
+.restaurants__cards__image{
+    height: 12rem;
+    width: 100%;
+    border: 0 solid transparent;
+    border-radius: 1rem 1rem 0 0;
+    box-shadow: none;
+    object-fit: cover;
+}
+.restaurants__cards__badge{
+    background-color: #99e2d0;
+    color: #1b6150;
+    padding: .5rem;
+    border-radius: .125rem;
+    position: absolute;
+    top: 1rem;
+    right: .75rem;
+}
+.restaurants__cards__contents{
+    padding: 1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.restaurants__cards__contents__text{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+    
+}
+.restaurants__cards__title{
+    margin: 0 0 0.25rem;
+    font-size: 1.17em;
+    font-weight: bold;
+}
+.restaurants__cards__text{
+    margin: 0.5rem 0;
+}
+.restaurants__cards__btn{
+    height: 2rem;
+    width: 2rem;
+    background-color: transparent;
+    border: 0 solid transparent;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    background-color: #000;
+}
+
+/* ----------------- Footer---------------- */
+.footer{
+    background-color: #353535;
+}
+.footer__container{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    max-width: 1280px;
+}
+.footer__logo{
+    color: #fff;
+    font-family: Shrikhand,"cursive";
+    font-size: 1.2rem;
+    margin: 0 0 1rem;
+}
+.footer__list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer__elements{
+    margin: .5rem 0;
+}
+.footer__elements:first-child{
+    margin-top:0;
+}
+.footer__link {
+    color: #fff;
+    text-decoration: none;
+}
+.footer__icon {
+    width: 1.2rem;
+    margin-right: .5rem;
+}
