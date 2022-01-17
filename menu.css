@@ -108,6 +108,29 @@ ol, ul {
     position: relative;
     background-color: #000;
 }
+.menu__header__btn{
+    height: 2rem;
+    width: 2rem;
+    background-color: transparent;
+    border: 0 solid transparent;
+    padding: 0;
+    display: flex;
+    cursor: pointer;
+    position: relative;
+}
+.menu__header a .cards_like {
+    color: gray;
+}
+.menu__header a .cards_like_hover{
+    display: none;
+}
+.menu__header a:hover .cards_like{
+    display: none;
+}
+.menu__header a:hover .cards_like_hover{
+    display: inline-block;
+    color: linear-gradient(180deg, rgba(255,121,218,1) 25%, rgba(147,86,220,1) 100%);
+}
 .menu__grid{
     display: grid;
 }

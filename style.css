@@ -215,6 +215,7 @@ ol, ul {
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 .restaurants__cards__contents__text{
     flex-grow: 1;
@@ -237,12 +238,23 @@ ol, ul {
     border: 0 solid transparent;
     padding: 0;
     display: flex;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
     position: relative;
-    background-color: #000;
 }
+.restaurants__cards__btn a .cards_like {
+    color: gray;
+}
+.restaurants__cards__btn a .cards_like_hover{
+    display: none;
+}
+.restaurants__cards__btn a:hover .cards_like{
+    display: none;
+}
+.restaurants__cards__btn a:hover .cards_like_hover{
+    display: inline-block;
+    color: linear-gradient(180deg, rgba(255,121,218,1) 25%, rgba(147,86,220,1) 100%);
+}
+
 
 /* ----------------- Footer---------------- */
 .footer{
