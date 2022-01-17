@@ -164,6 +164,18 @@ ol, ul {
     margin-right: 1rem;
     color: #7e7e7e;
 }
+@media(min-width:1280px){
+    .fonctionnement__liste{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .fonctionnement__etape{
+        width: 20%;
+        align-content: center;
+        justify-content: center;
+    }
+}
 /* ----------------- Restaurants---------------- */
 .restaurants{
     background-color: #f6f6f6;
