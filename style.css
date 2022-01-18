@@ -526,11 +526,14 @@ ul {
 
 .footer {
     background-color: #353535;
+    
 }
 
 .footer__container {
     display: flex;
+    align-items: flex-start;
     flex-direction: column;
+    margin: auto;
     padding: 1rem;
     max-width: 1280px;
 }
