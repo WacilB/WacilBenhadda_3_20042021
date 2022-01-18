@@ -1,60 +1,265 @@
 /* Reset CSS */
 
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
     font-family: 'Roboto', sans-serif;
-	font-size: 100%;
-	vertical-align: baseline;
+    font-size: 100%;
+    vertical-align: baseline;
 }
+
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
 }
+
 body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
+    line-height: 1;
 }
 
+ol,
+ul {
+    list-style: none;
+}
 
+/* ----------------- Loader---------------- */
+
+.loader__container {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: hsla(0,0%,100%,.9);
+    animation: loader 1s;
+    animation-delay: 1.75s;
+    animation-fill-mode: both;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    @keyframes loader{
+        100% {
+            opacity: 0;
+            z-index: -10;
+        }
+    }
+
+    /* ----------------- test loader ---------------- */
+
+    /* MESH LOADER */
+
+.loader {
+    overflow: hidden;
+    height: inherit;
+    width: inherit;
+  }
+  .loader .loader__cercle{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    border-radius: 50%;
+    margin: -15px;
+    -webkit-animation: animation__loader 3s ease-in-out infinite -1.5s;
+    animation: animation__loader 3s ease-in-out infinite -1.5s;
+  }
+  .cercle__1{
+    background: #9356DC;
+  }
+  .cercle__2{
+    background: #FF79DA;
+  }
+  
+  .loader > div .loader__cercle:last-child {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+  }
+  
+  .loader > div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+  
+  .loader > div:last-child {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+  @-webkit-keyframes animation__loader {
+    0% {
+      -webkit-transform-origin: 50% -100%;
+      transform-origin: 50% -100%;
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+    }
+    50% {
+      -webkit-transform-origin: 50% -100%;
+      transform-origin: 50% -100%;
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+    50.1% {
+      -webkit-transform-origin: 50% 200%;
+      transform-origin: 50% 200%;
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform-origin: 50% 200%;
+      transform-origin: 50% 200%;
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes animation__loader {
+    0% {
+      -webkit-transform-origin: 50% -100%;
+      transform-origin: 50% -100%;
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+    }
+    50% {
+      -webkit-transform-origin: 50% -100%;
+      transform-origin: 50% -100%;
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+    50.1% {
+      -webkit-transform-origin: 50% 200%;
+      transform-origin: 50% 200%;
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform-origin: 50% 200%;
+      transform-origin: 50% 200%;
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
 
 /* ----------------- Header---------------- */
 
-.header{
+.header {
     padding: 1rem;
     box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
     z-index: 1000;
     position: relative;
 }
-.header__logo{
+
+.header__logo {
     text-align: center;
     font-family: 'Shrikhand', cursive;
     font-size: 2em;
 }
 
+
 /* ----------------- Localisation---------------- */
-.localisation{
+
+.localisation {
     display: flex;
     justify-content: center;
     padding: 1.25rem 1rem;
@@ -62,27 +267,33 @@ ol, ul {
     background-color: #f3f3f3;
     z-index: 1;
 }
-.localisation__icon{
+
+.localisation__icon {
     margin-right: 1rem;
 }
-.localisation__text{
+
+.localisation__text {
     font-weight: 700;
 }
+
+
 /* ----------------- Banniere---------------- */
 
-.banniere{
+.banniere {
     text-align: center;
     padding: 2rem;
 }
-.banniere__titre{
+
+.banniere__titre {
     font-size: 1.5em;
 }
-.banniere__text{
+
+.banniere__text {
     font-weight: 300;
     margin: 1.5rem 0;
 }
 
-.banniere__btn{
+.banniere__btn {
     border: 0;
     padding: .75rem 1.5rem;
     font-weight: 500;
@@ -90,26 +301,27 @@ ol, ul {
     border-radius: 100px;
     color: #fff;
     background-color: #686868;
-    background-image: linear-gradient( 0deg ,rgba(147,86,220,.9),rgba(255,121,218,.9));
+    background-image: linear-gradient( 0deg, rgba(147, 86, 220, .9), rgba(255, 121, 218, .9));
     cursor: pointer;
     transition-duration: .25s;
     box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
 }
 
+
 /* ----------------- Fonctionnement---------------- */
 
-.fonctionnement{
+.fonctionnement {
     max-width: 1280px;
     margin: auto;
     padding: 2rem 1rem;
 }
 
-.fonctionnement__titre{
-    margin: 0  0 0.8em  0;
+.fonctionnement__titre {
+    margin: 0 0 0.8em 0;
     font-size: 1.5em;
 }
 
-.fonctionnement__etape{
+.fonctionnement__etape {
     padding: 1.5rem;
     margin: 1rem 0 1rem .75rem;
     box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
@@ -119,7 +331,7 @@ ol, ul {
     position: relative;
 }
 
-.fonctionnement__etape:first-child::before{
+.fonctionnement__etape:first-child::before {
     margin-top: 0;
     content: "1";
     background: #9356dc;
@@ -134,8 +346,8 @@ ol, ul {
     left: -.75rem;
 }
 
-.fonctionnement__etape:nth-child(2)::before{
-    content:  "2";
+.fonctionnement__etape:nth-child(2)::before {
+    content: "2";
     background: #9356dc;
     height: 1.5rem;
     width: 1.5rem;
@@ -147,7 +359,8 @@ ol, ul {
     position: absolute;
     left: -.75rem;
 }
-.fonctionnement__etape:last-child::before{
+
+.fonctionnement__etape:last-child::before {
     content: "3";
     background: #9356dc;
     height: 1.5rem;
@@ -160,44 +373,53 @@ ol, ul {
     position: absolute;
     left: -.75rem;
 }
-.fonctionnement__etape__icon{
+
+.fonctionnement__etape__icon {
     margin-right: 1rem;
     color: #7e7e7e;
 }
-@media(min-width:1280px){
-    .fonctionnement__liste{
+
+@media(min-width:1280px) {
+    .fonctionnement__liste {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-    .fonctionnement__etape{
+    .fonctionnement__etape {
         width: 20%;
         align-content: center;
         justify-content: center;
     }
 }
+
+
 /* ----------------- Restaurants---------------- */
-.restaurants{
+
+.restaurants {
     background-color: #f6f6f6;
     padding: 2rem 1rem;
 }
-.restaurants__container{
+
+.restaurants__container {
     max-width: 1280px;
     margin: auto;
     position: relative;
 }
-.restaurants__title{
+
+.restaurants__title {
     font-size: 1.5em;
     margin-bottom: 0.8em;
     font-weight: bold;
 }
-.restaurants__grid{
+
+.restaurants__grid {
     display: grid;
-    grid-template-columns: repeat(1,1fr);
+    grid-template-columns: repeat(1, 1fr);
     column-gap: 2rem;
     row-gap: 2rem;
 }
-.restaurants__cards{
+
+.restaurants__cards {
     background-color: #fff;
     border-radius: 1rem;
     position: relative;
@@ -205,7 +427,8 @@ ol, ul {
     display: block;
     color: black;
 }
-.restaurants__cards__image{
+
+.restaurants__cards__image {
     height: 12rem;
     width: 100%;
     border: 0 solid transparent;
@@ -213,7 +436,8 @@ ol, ul {
     box-shadow: none;
     object-fit: cover;
 }
-.restaurants__cards__badge{
+
+.restaurants__cards__badge {
     background-color: #99e2d0;
     color: #1b6150;
     padding: .5rem;
@@ -222,28 +446,32 @@ ol, ul {
     top: 1rem;
     right: .75rem;
 }
-.restaurants__cards__contents{
+
+.restaurants__cards__contents {
     padding: 1rem;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.restaurants__cards__contents__text{
+
+.restaurants__cards__contents__text {
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 0%;
-    
 }
-.restaurants__cards__title{
+
+.restaurants__cards__title {
     margin: 0 0 0.25rem;
     font-size: 1.17em;
     font-weight: bold;
 }
-.restaurants__cards__text{
+
+.restaurants__cards__text {
     margin: 0.5rem 0;
 }
-.restaurants__cards__btn{
+
+.restaurants__cards__btn {
     height: 2rem;
     width: 2rem;
     background-color: transparent;
@@ -253,73 +481,100 @@ ol, ul {
     cursor: pointer;
     position: relative;
 }
+
 .restaurants__cards__btn a .cards_like {
     color: gray;
 }
-.restaurants__cards__btn a .cards_like_hover{
+
+.restaurants__cards__btn a .cards_like_hover {
     display: none;
 }
-.restaurants__cards__btn a:hover .cards_like{
+
+.restaurants__cards__btn a:hover .cards_like {
     display: none;
 }
-.restaurants__cards__btn a:hover .cards_like_hover{
+
+.restaurants__cards__btn a:hover .cards_like_hover {
     display: inline-block;
-    color: linear-gradient(180deg, rgba(255,121,218,1) 25%, rgba(147,86,220,1) 100%);
+    color: linear-gradient(180deg, rgba(255, 121, 218, 1) 25%, rgba(147, 86, 220, 1) 100%);
 }
-@media (min-width:1280px){
-    .restaurants__grid{
+
+@media (min-width:1280px) {
+    .restaurants__grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
         grid-column-gap: 5%;
         grid-row-gap: 5%;
     }
-    .restaurants__cards__palette{
+    .restaurants__cards__palette {
         grid-area: 1 / 1 / 2 / 2;
     }
-    .restaurants__cards__note{
-        grid-area: 1 / 2 / 2 / 3; 
+    .restaurants__cards__note {
+        grid-area: 1 / 2 / 2 / 3;
     }
-    .restaurants__cards__francaise{
+    .restaurants__cards__francaise {
         grid-area: 2 / 1 / 3 / 2;
     }
-    .restaurants__cards__delice{
+    .restaurants__cards__delice {
         grid-area: 2 / 2 / 3 / 3;
     }
 }
 
+
 /* ----------------- Footer---------------- */
-.footer{
+
+.footer {
     background-color: #353535;
 }
-.footer__container{
+
+.footer__container {
     display: flex;
     flex-direction: column;
     padding: 1rem;
     max-width: 1280px;
 }
-.footer__logo{
+
+.footer__logo {
     color: #fff;
-    font-family: Shrikhand,"cursive";
+    font-family: Shrikhand, "cursive";
     font-size: 1.2rem;
     margin: 0 0 1rem;
 }
-.footer__list{
+
+.footer__list {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-.footer__elements{
+
+.footer__elements {
     margin: .5rem 0;
 }
-.footer__elements:first-child{
-    margin-top:0;
+
+.footer__elements:first-child {
+    margin-top: 0;
 }
+
 .footer__link {
     color: #fff;
     text-decoration: none;
 }
+
 .footer__icon {
     width: 1.2rem;
     margin-right: .5rem;
 }
+
+
+/* ----------------- Keyframes---------------- */
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

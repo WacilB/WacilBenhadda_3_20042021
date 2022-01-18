@@ -1,53 +1,137 @@
 /* Reset CSS */
 
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
     font-family: 'Roboto', sans-serif;
-	font-size: 100%;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
+    font-size: 100%;
+    vertical-align: baseline;
 }
 
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
 
 
 /* ----------------- Header---------------- */
 
-.header{
+.header {
     padding: 1rem;
     box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
     z-index: 1000;
     position: relative;
 }
-.header__retour{
+
+.header__retour {
     position: absolute;
     left: 2rem;
     height: 2rem;
@@ -60,24 +144,25 @@ ol, ul {
     font-size: 1.2rem;
     color: #000;
 }
-.header__logo{
+
+.header__logo {
     text-align: center;
     font-family: 'Shrikhand', cursive;
     font-size: 2em;
 }
 
-
-.banniere__image{
+.banniere__image {
     max-width: 100%;
     max-height: 32rem;
     width: 100%;
     object-fit: cover;
     margin: 0;
-   
 }
+
+
 /* ----------------- Header---------------- */
 
-.menu{
+.menu {
     margin: -4rem auto 0 auto;
     border-radius: 2rem 2rem 0 0;
     background-color: #f6f6f6;
@@ -85,17 +170,20 @@ ol, ul {
     position: relative;
     max-width: 1280px;
 }
-.menu__header{
+
+.menu__header {
     padding: 1rem 2rem 0 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.menu__header__title{
-    font-family: Shrikhand,"cursive";
+
+.menu__header__title {
+    font-family: Shrikhand, "cursive";
     font-size: 1.5em;
 }
-.menu__header__btn{
+
+.menu__header__btn {
     height: 2rem;
     width: 2rem;
     background-color: transparent;
@@ -108,7 +196,8 @@ ol, ul {
     position: relative;
     background-color: #000;
 }
-.menu__header__btn{
+
+.menu__header__btn {
     height: 2rem;
     width: 2rem;
     background-color: transparent;
@@ -118,36 +207,44 @@ ol, ul {
     cursor: pointer;
     position: relative;
 }
+
 .menu__header a .cards_like {
     color: gray;
 }
-.menu__header a .cards_like_hover{
+
+.menu__header a .cards_like_hover {
     display: none;
 }
-.menu__header a:hover .cards_like{
+
+.menu__header a:hover .cards_like {
     display: none;
 }
-.menu__header a:hover .cards_like_hover{
+
+.menu__header a:hover .cards_like_hover {
     display: inline-block;
-    color: linear-gradient(180deg, rgba(255,121,218,1) 25%, rgba(147,86,220,1) 100%);
+    color: linear-gradient(180deg, rgba(255, 121, 218, 1) 25%, rgba(147, 86, 220, 1) 100%);
 }
-.menu__grid{
+
+.menu__grid {
     display: grid;
 }
-.menu__section{
+
+.menu__section {
     max-width: 100%;
     overflow: hidden;
     padding: 0 1rem;
     margin-top: 1em;
 }
-.menu__section__title{
+
+.menu__section__title {
     text-transform: uppercase;
     font-size: 1.15em;
     position: relative;
     padding-bottom: .5rem;
     font-weight: 400;
 }
-.menu__section__title::after{
+
+.menu__section__title::after {
     content: "";
     width: 3rem;
     height: .25rem;
@@ -156,7 +253,8 @@ ol, ul {
     left: 0;
     bottom: 0;
 }
-.menu__item{
+
+.menu__item {
     background-color: #fff;
     padding: 1rem;
     display: flex;
@@ -168,12 +266,14 @@ ol, ul {
     cursor: pointer;
     max-width: 100%;
 }
-.menu__item__text{
+
+.menu__item__text {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
 }
-.menu__item__price{
+
+.menu__item__price {
     font-size: 0.8em;
     font-weight: 500;
     display: flex;
@@ -181,24 +281,28 @@ ol, ul {
     align-items: flex-end;
     padding-left: .5rem;
 }
-.menu__item__title{
+
+.menu__item__title {
     font-size: 1em;
     font-weight: 500;
 }
-.menu__item__description{
+
+.menu__item__description {
     font-size: 0.8em;
     font-weight: 300;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
-.menu__btn__container{
+
+.menu__btn__container {
     display: flex;
     text-decoration: none;
     justify-content: center;
     padding: 3rem 0;
 }
-.menu__btn{
+
+.menu__btn {
     border: 0;
     padding: .75rem 1.5rem;
     font-weight: 500;
@@ -206,49 +310,76 @@ ol, ul {
     border-radius: 100px;
     color: #fff;
     background-color: #686868;
-    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+    background-image: linear-gradient(0deg, rgba(147, 86, 220, .9), rgba(255, 121, 218, .9));
     transition-duration: .25s;
     box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
     cursor: pointer;
 }
-.menu__btn:hover{
+
+.menu__btn:hover {
     background-color: #fff;
     box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 50%);
 }
 
+@media(min-width:1280px) {
+    .menu__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+    .menu__entrees{
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    .menu__plats{
+        grid-area: 1 / 2 / 2 / 3;
+    }
+    .menu__desserts{
+        grid-area: 1 / 3 / 2 / 4; 
+    }
+}
 
 
 /* ----------------- Footer---------------- */
-.footer{
+
+.footer {
     background-color: #353535;
 }
-.footer__container{
+
+.footer__container {
     display: flex;
     flex-direction: column;
     padding: 1rem;
     max-width: 1280px;
 }
-.footer__logo{
+
+.footer__logo {
     color: #fff;
-    font-family: Shrikhand,"cursive";
+    font-family: Shrikhand, "cursive";
     font-size: 1.2rem;
     margin: 0 0 1rem;
 }
-.footer__list{
+
+.footer__list {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-.footer__elements{
+
+.footer__elements {
     margin: .5rem 0;
 }
-.footer__elements:first-child{
-    margin-top:0;
+
+.footer__elements:first-child {
+    margin-top: 0;
 }
+
 .footer__link {
     color: #fff;
     text-decoration: none;
 }
+
 .footer__icon {
     width: 1.2rem;
     margin-right: .5rem;
