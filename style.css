@@ -144,10 +144,6 @@ ul {
   }
 }
 
-/* ----------------- test loader ---------------- */
-
-/* MESH LOADER */
-
 .loader {
   overflow: hidden;
   height: inherit;
@@ -323,11 +319,17 @@ ul {
 .fonctionnement__etape {
   padding: 1.5rem;
   margin: 1rem 0 1rem 0.75rem;
-  box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
+  box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.25);
   border-radius: 1.25rem;
   background-color: #f6f6f6;
   display: flex;
   position: relative;
+}
+.fonctionnement__etape:hover {
+  background-color: rgba(147, 86, 220, 0.25);
+}
+.fonctionnement__etape:hover .fonctionnement__etape__icon {
+  color: #9356dc;
 }
 
 .fonctionnement__etape:first-child::before {
@@ -416,7 +418,10 @@ ul {
   column-gap: 2rem;
   row-gap: 2rem;
 }
-
+.restaurants__items {
+  box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
+  border-radius: 1rem;
+}
 .restaurants__cards {
   background-color: #fff;
   border-radius: 1rem;
@@ -451,6 +456,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-radius: 0 0 1rem 1rem;
 }
 
 .restaurants__cards__contents__text {
@@ -470,48 +476,48 @@ ul {
 }
 
 .restaurants__cards__btn {
-    height: 2rem;
-    width: 2rem;
-    background-color: transparent;
-    border: transparent 0px solid;
-    padding: 0;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    cursor: pointer;
-    position: relative;
-    background-color: black;
+  height: 2rem;
+  width: 2rem;
+  background-color: transparent;
+  border: transparent 0px solid;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  background-color: black;
 }
 
 .restaurants__cards__btn:hover::before {
-    opacity: 1;
+  opacity: 1;
 }
 .restaurants__cards__btn:before {
-    opacity: 0;
-      transition: 0.5s;
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background:linear-gradient(0deg, #9356DC 0%,#FF79DA 100%);
+  opacity: 0;
+  transition: 0.5s;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
 }
-.cards__like{
-    transition-duration: .25s;
-    background-color: #f6f6f6;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    mix-blend-mode: lighten;
+.cards__like {
+  transition-duration: 0.25s;
+  background-color: #f6f6f6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mix-blend-mode: lighten;
 }
-.restaurants__cards__btn:hover .cards__like__nobg{
-    opacity: 0;
+.restaurants__cards__btn:hover .cards__like__nobg {
+  opacity: 0;
 }
 
 @media (min-width: 1280px) {
@@ -540,6 +546,7 @@ ul {
 
 .footer {
   background-color: #353535;
+  margin-top: 5em;
 }
 
 .footer__container {

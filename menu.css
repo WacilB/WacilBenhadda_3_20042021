@@ -225,14 +225,7 @@ ul {
   opacity: 0;
 }
 
-.menu__header a:hover .cards_like_hover {
-  display: inline-block;
-  color: linear-gradient(
-    180deg,
-    rgba(255, 121, 218, 1) 25%,
-    rgba(147, 86, 220, 1) 100%
-  );
-}
+
 
 .menu__grid {
   display: grid;
