@@ -137,12 +137,7 @@ ul {
   justify-content: center;
 }
 
-@keyframes loader {
-  100% {
-    opacity: 0;
-    z-index: -10;
-  }
-}
+
 
 .loader {
   overflow: hidden;
@@ -181,59 +176,6 @@ ul {
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
-@-webkit-keyframes animation__loader {
-  0% {
-    -webkit-transform-origin: 50% -100%;
-    transform-origin: 50% -100%;
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-  }
-  50% {
-    -webkit-transform-origin: 50% -100%;
-    transform-origin: 50% -100%;
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-  50.1% {
-    -webkit-transform-origin: 50% 200%;
-    transform-origin: 50% 200%;
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform-origin: 50% 200%;
-    transform-origin: 50% 200%;
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes animation__loader {
-  0% {
-    -webkit-transform-origin: 50% -100%;
-    transform-origin: 50% -100%;
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-  }
-  50% {
-    -webkit-transform-origin: 50% -100%;
-    transform-origin: 50% -100%;
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-  50.1% {
-    -webkit-transform-origin: 50% 200%;
-    transform-origin: 50% 200%;
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform-origin: 50% 200%;
-    transform-origin: 50% 200%;
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
 
 /* ----------------- Header---------------- */
 
@@ -257,7 +199,7 @@ ul {
   justify-content: center;
   padding: 1.25rem 1rem;
   font-size: 1.2rem;
-  background-color: #f3f3f3;
+  background-color: #eeeeee;
   z-index: 1;
 }
 
@@ -266,7 +208,7 @@ ul {
 }
 
 .localisation__text {
-  font-weight: 700;
+  font-weight: 500;
 }
 
 /* ----------------- Banniere---------------- */
@@ -274,6 +216,7 @@ ul {
 .banniere {
   text-align: center;
   padding: 2rem;
+  background-color: #f6f6f6;
 }
 
 .banniere__titre {
@@ -312,7 +255,7 @@ ul {
 }
 
 .fonctionnement__titre {
-  margin: 0 0 0.8em 0;
+  margin: 0 0 1em 0;
   font-size: 1.5em;
 }
 
@@ -397,7 +340,8 @@ ul {
 
 .restaurants {
   background-color: #f6f6f6;
-  padding: 2rem 1rem;
+  padding: 2rem 1rem 5rem 1rem;
+ 
 }
 
 .restaurants__container {
@@ -408,7 +352,7 @@ ul {
 
 .restaurants__title {
   font-size: 1.5em;
-  margin-bottom: 0.8em;
+  margin-bottom: 1em;
   font-weight: bold;
 }
 
@@ -473,6 +417,7 @@ ul {
 
 .restaurants__cards__text {
   margin: 0.5rem 0;
+  font-weight: 300;
 }
 
 .restaurants__cards__btn {
@@ -546,7 +491,6 @@ ul {
 
 .footer {
   background-color: #353535;
-  margin-top: 5em;
 }
 
 .footer__container {
@@ -562,7 +506,7 @@ ul {
   color: #fff;
   font-family: Shrikhand, "cursive";
   font-size: 1.2rem;
-  margin: 0 0 1rem;
+  margin:  1rem 0;
 }
 
 .footer__list {
@@ -572,7 +516,7 @@ ul {
 }
 
 .footer__elements {
-  margin: 0.5rem 0;
+  margin: 0.8rem 0;
 }
 
 .footer__elements:first-child {
@@ -591,20 +535,63 @@ ul {
 
 /* ----------------- Keyframes---------------- */
 
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
+@keyframes loader {
   100% {
-    -webkit-transform: rotate(360deg);
+    opacity: 0;
+    z-index: -10;
   }
 }
-
-@keyframes spin {
+@-webkit-keyframes animation__loader {
   0% {
+    -webkit-transform-origin: 50% -100%;
+    transform-origin: 50% -100%;
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  50% {
+    -webkit-transform-origin: 50% -100%;
+    transform-origin: 50% -100%;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+  50.1% {
+    -webkit-transform-origin: 50% 200%;
+    transform-origin: 50% 200%;
+    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   100% {
+    -webkit-transform-origin: 50% 200%;
+    transform-origin: 50% 200%;
+    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
+
+@keyframes animation__loader {
+  0% {
+    -webkit-transform-origin: 50% -100%;
+    transform-origin: 50% -100%;
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  50% {
+    -webkit-transform-origin: 50% -100%;
+    transform-origin: 50% -100%;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+  50.1% {
+    -webkit-transform-origin: 50% 200%;
+    transform-origin: 50% 200%;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform-origin: 50% 200%;
+    transform-origin: 50% 200%;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
