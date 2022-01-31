@@ -128,7 +128,7 @@ ul {
   left: 0;
   top: 0;
   background-color: hsla(0, 0%, 100%, 0.9);
-  animation: loader 1s;
+  animation: loader 2s;
   animation-delay: 1.75s;
   animation-fill-mode: both;
   z-index: 10000;
