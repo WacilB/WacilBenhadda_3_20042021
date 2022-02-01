@@ -465,7 +465,7 @@ ul {
   opacity: 0;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 767px) {
   .restaurants__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
